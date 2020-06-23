@@ -1,0 +1,19 @@
+{
+    "name": "martimundo/lojainfotech",
+    "authors": [
+        {
+            "name": "MRA Infotech",
+            "email": "suporte@infotechmra.com.br"
+        }
+    ],
+    "require": {
+    	"phpmailer/phpmailer":"5.2.22",
+    	"slim/slim":"2.0",
+    	"rain/raintpl":"3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Martimundo\\": "vendor\\martimundo\\php-classes\\src"
+        }
+    }
+}
