@@ -1,17 +1,19 @@
 <?php 
 
 require_once("vendor/autoload.php");
+use \Slim\Slim;
 
-$app = new \Slim\Slim();
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-	$sql = new Martimundo\DB\Sql();
-	$results = $sql->select("SELECT * FROM tb_users");
+	
+	
+	$page = new Martimundo\Page();
 
-	echo json_encode($results);
+	$page->setTpl("index");
 
 });
 
