@@ -15,12 +15,12 @@ class Page{
     ];
 
     //Método para Criar o header de todas as páginas
-    public function __construct($opts = array()){
+    public function __construct($opts = array(), $tpl_dir = "/views/"){
         $this->options=array_merge($this->defautls, $opts);
 
         // configuranto exemplo com o Tamplet RainTpl...
 	    $config = array(
-        "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views/",
+        "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
         "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
         "debug"         => false // set to false to improve the speed
        );
