@@ -31,6 +31,7 @@ class Page{
 
         $this->setData($this->options["data"]);
 
+        if($this->options["header"]=== true)
         $this->tpl->draw("header");
 
     }
@@ -50,6 +51,7 @@ class Page{
     //Método para criar o Footer das páginas
     public function __destruct(){
 
+        if($this->options["footer"]=== true)
         $this->tpl->draw("footer");
 
     }
